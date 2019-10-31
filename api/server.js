@@ -9,14 +9,15 @@ server.use(helmet());
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  Shoutouts.find()
-  .then(shoutouts => {
-    res.status(200).json(shoutouts);
-  })
-  .catch (error => {
-    console.error('\nERROR', error);
-    res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
-  });
+  // Shoutouts.find()
+  // .then(shoutouts => {
+  //   res.status(200).json(shoutouts);
+  // })
+  // .catch (error => {
+  //   console.error('\nERROR', error);
+  //   res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
+  // });
+  res.status(200).json({message: "It finally worked"})
 });
 
 server.post('/', (req, res) => {
